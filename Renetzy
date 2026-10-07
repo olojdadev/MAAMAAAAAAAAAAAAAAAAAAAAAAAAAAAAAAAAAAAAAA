@@ -1,0 +1,136 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    //C++ Syntax
+    //#inclue<iostream> give access to std::cout. std::std::cin >> 
+    std::cout<<"Hello World"<<std::endl;
+    return 0;
+}
+
+ //Variable, types, and I/O 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    //Declaring the Variable and different type
+
+    int userAge = 20;
+    double userPrice = 30.60;
+    float userWeight = 80.5f;
+    char userGrade = 'B';
+    bool isStudent = true;
+    string userName = "Oloj Mapagmahal";
+
+    //Getting the input using cout
+    cout<<"Name "<<userName<<endl;
+    cout<<"Age "<<userAge<<endl;
+    cout<<"Price "<<userPrice<<endl;
+    cout<<"Grade "<<userGrade<<endl;
+    cout<<"Student "<<isStudent<<endl;
+    cout<<"Weight "<<userWeight<<endl;
+}
+
+//Getting input using cin--
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    string userCity;
+    cout<<"\nEnter your favorite city: ";
+    cin>> userCity;
+    cout<<"Your favorite city is: "<<userCity<<endl;
+
+    //Reading a full line (including spaces)
+    cin.ignore(); //clears leftovers newline character from previous cin
+
+    string fullSentences;
+    cout<<"Enter a sentence about you self: ";
+    getline(cin, fullSentences);
+    cout<<"You said: "<<fullSentences<<endl;
+
+    return 0;
+
+   
+}
+
+ //Control Flow(if/ else, switch, loops)
+ #include <iostream>
+ #include <string>
+
+ using namespace std;
+
+ int main()
+ {
+    // if/if else/else condition
+    int score;
+    cout<<"Enter your score: ";
+    cin>>score;
+
+    if(score >= 90){
+        cout<<"Grade is A"<<endl;
+    }else if(score >= 80){
+        cout<<"Grade is B"<<endl;
+    }else if(score >= 70){
+        cout<<"Grade is C"<<endl;
+    }else{
+        cout<<"Grade is F"<<endl;
+    }
+
+    //Switch statement
+    int day;
+    cout<<"\nEnter a day number(1-7): ";
+    cin>>day;
+
+    switch(day){
+        case 1: cout<<"Monday"<<endl;break;
+        case 2: cout<<"Tuesday"<<endl;break;
+        case 3: cout<<"Wednesday"<<endl;break;
+        case 4: cout<<"Thursday"<<endl;break;
+        case 5: cout<<"Friday"<<endl;break;
+        case 6: cout<<"Saturday"<<endl;break;
+        case 7: cout<<"Sunday"<<endl;break;
+        default: cout<<"Ivalid input"<<endl; break;
+
+        //for loop
+        cout<<"\nCounting 1 to 5 with a for loop: "<<endl;
+        for(int i = 1; i <= 5; i++){
+            cout<<i<<"";
+        }
+        cout<<endl;
+
+        //while loop
+        cout<<"\nCounting down from 5 with a while loop: "<<endl;
+        int n = 5;
+        while(n>0){
+            cout<<n <<" ";
+            n--;
+        }
+
+        //do while loop
+        cout<<"The do while"<<endl;
+        int x = 0;
+        do{
+            cout<<" x = "<<x<<endl;
+            x++;
+        }while(x < 3);
+    }
+
+    //break and continue
+    cout<<"\nSkipping 3 using continue, stopping at 7 using break: "<<endl;
+    for(int i = 1; i <= 10; i++){
+        if(i = 3) continue;
+        if(i = 7) break;
+        cout << i <<" ";
+    }
+    cout << endl;
+
+    return 0;
+ }
